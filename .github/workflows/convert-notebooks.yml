@@ -1,4 +1,10 @@
-on: [push]
+on:
+  push:
+    paths:
+      - '**.ipynb'
+
+permissions:
+  contents: write
 
 jobs:
   convert:
@@ -21,3 +27,4 @@ jobs:
           git add **/*.py
           git diff --cached --quiet || git commit -m "auto: convert notebooks to .py"
           git push
+
