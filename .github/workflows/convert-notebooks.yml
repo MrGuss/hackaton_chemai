@@ -2,6 +2,7 @@ on:
   push:
     paths:
       - '**.ipynb'
+      - '.github/workflows/convert-notebooks.yml'
 
 permissions:
   contents: write
