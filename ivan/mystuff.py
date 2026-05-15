@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[8]:
 
 
 # import stuff
@@ -10,7 +10,6 @@ import pandas as pd
 
 
 # In[ ]:
-
 
 
 FILES = {
@@ -29,21 +28,39 @@ print("Done.")
 # In[ ]:
 
 
-
 sample_sub = pd.read_csv("sample_submission.csv").set_index("index")
 test = pd.read_csv("test.csv").set_index("index")
 train = pd.read_csv("train.csv").set_index("index")
 
-# In[6]:
+# In[11]:
 
 
 train.info()
 train.describe()
 
-# In[7]:
+# In[ ]:
 
 
 train.head()
+
+# In[ ]:
+
+
+# check missing
+missing = train.isnull().sum()
+missing = missing[missing > 0].sort_values(ascending=False)
+print(missing if len(missing) else "No missing values")
+
+# In[25]:
+
+
+# targets destribution
+target_col = train.columns[0:3]
+print(f"Target: {target_col}")
+print(train[target_col].describe())
+print()
+# if classification:
+print(train[target_col].value_counts())
 
 # In[ ]:
 
