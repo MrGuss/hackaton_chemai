@@ -1,21 +1,20 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
+# In[ ]:
 
 
 # import stuff
 from urllib.request import urlretrieve
 import pandas as pd
 
-
 # In[ ]:
 
 
 FILES = {
-    "sample_submission.csv": "1LL6moSzpUVxJUTMeXihWvUxBJNjvj6EH",
     "test.csv": "1Ui2t87X3in-Wu-pnjkDXa_VtPsVafi0l",
     "train.csv": "159PZX3X5rpUO-WbzWyC9whnc8B4mNqJl",
+    "sample_submission.csv": "1LL6moSzpUVxJUTMeXihWvUxBJNjvj6EH",
 }
 
 for filename, file_id in FILES.items():
@@ -61,8 +60,3 @@ print(train[target_col].describe())
 print()
 # if classification:
 print(train[target_col].value_counts())
-
-# In[ ]:
-
-
-
