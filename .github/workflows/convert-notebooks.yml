@@ -25,10 +25,6 @@ jobs:
             jupyter nbconvert --to python "$nb"
           done
 
-      - name: Lint
-        run: ruff check --output-format=github .
-        continue-on-error: true
-
       - name: Commit
         run: |
           git config user.name "github-actions"
