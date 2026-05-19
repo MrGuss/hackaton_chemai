@@ -4,13 +4,21 @@
 # In[ ]:
 
 
-!wget https://drive.google.com/uc?id=1LL6moSzpUVxJUTMeXihWvUxBJNjvj6EH -O sample_submission.csv
-!wget https://drive.google.com/uc?id=1Ui2t87X3in-Wu-pnjkDXa_VtPsVafi0l -O test.csv
-!wget https://drive.google.com/uc?id=159PZX3X5rpUO-WbzWyC9whnc8B4mNqJl -O train.csv
-import os
-import gc
-import math
+from urllib.request import urlretrieve
 
+
+FILES = {
+    "test.csv": "1Ui2t87X3in-Wu-pnjkDXa_VtPsVafi0l",
+    "train.csv": "159PZX3X5rpUO-WbzWyC9whnc8B4mNqJl",
+    "sample_submission.csv": "1LL6moSzpUVxJUTMeXihWvUxBJNjvj6EH",
+}
+
+for filename, file_id in FILES.items():
+    url = f"https://drive.google.com/uc?id={file_id}"
+    print(f"Downloading {filename}...")
+    urlretrieve(url, filename)
+
+print("Done.")
 
 # In[17]:
 
