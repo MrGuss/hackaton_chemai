@@ -1,0 +1,27 @@
+on:
+  push:
+    paths:
+      - "**.py"
+      - ".github/workflows/lint.yml"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup
+        run: pip install ruff
+
+      - name: Lint
+        id: lint
+        run: ruff check --output-format=github **/*.py
+        continue-on-error: true
+
+      - name: Lint summary
+        if: always()
+        run: |
+          if [ "${{ steps.lint.outcome }}" = "failure" ]; then
+            echo "## Lint failed" >> $GITHUB_STEP_SUMMARY
+            echo "See annotations in the Files Changed tab." >> $GITHUB_STEP_SUMMARY
+          fi
