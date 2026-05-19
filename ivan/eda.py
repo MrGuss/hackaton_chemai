@@ -8,7 +8,7 @@
 
 from urllib.request import urlretrieve
 
-# In[172]:
+# In[ ]:
 
 
 # CORE
@@ -59,37 +59,14 @@ from sklearn.model_selection import (
 
 # METRICS
 from sklearn.metrics import (
-    mean_squared_error,
-    mean_absolute_error,
-    r2_score,
     silhouette_score
 )
 
 
 # MODELS
 from sklearn.ensemble import (
-    RandomForestRegressor,
-    ExtraTreesRegressor,
     RandomForestClassifier
 )
-from sklearn.linear_model import (
-    Ridge,
-    Lasso,
-    ElasticNet,
-    LinearRegression
-)
-
-from sklearn.multioutput import MultiOutputRegressor
-
-
-# BOOSTING
-from catboost import CatBoostRegressor
-from xgboost import XGBRegressor
-#from lightgbm import LGBMRegressor
-
-
-# INTERPRETABILITY
-import shap
 
 warnings.filterwarnings("ignore")
 
