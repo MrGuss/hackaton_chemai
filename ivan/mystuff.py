@@ -10,6 +10,9 @@ import pandas as pd
 import os
 import gc
 import math
+!wget https://drive.google.com/uc?id=1LL6moSzpUVxJUTMeXihWvUxBJNjvj6EH -O sample_submission.csv
+!wget https://drive.google.com/uc?id=1Ui2t87X3in-Wu-pnjkDXa_VtPsVafi0l -O test.csv
+!wget https://drive.google.com/uc?id=159PZX3X5rpUO-WbzWyC9whnc8B4mNqJl -O train.csv
 
 
 # In[2]:
