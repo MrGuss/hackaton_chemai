@@ -1,12 +1,17 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 # import stuff
 from urllib.request import urlretrieve
 import pandas as pd
+import os
+import gc
+import random
+import math
+
 
 # In[2]:
 
