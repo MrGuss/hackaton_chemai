@@ -9,7 +9,6 @@ from urllib.request import urlretrieve
 import pandas as pd
 import os
 import gc
-import random
 import math
 
 
