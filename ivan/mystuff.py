@@ -7,9 +7,6 @@
 # import stuff
 from urllib.request import urlretrieve
 import pandas as pd
-import os
-import gc
-import math
 
 
 # In[2]:
