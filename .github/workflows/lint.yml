@@ -15,7 +15,7 @@ jobs:
 
       - name: Lint
         id: lint
-        run: ruff check --output-format=github .
+        run: ruff check --output-format=github **/*.py
         continue-on-error: true
 
       - name: Lint summary
