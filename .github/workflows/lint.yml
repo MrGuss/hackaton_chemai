@@ -12,6 +12,9 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
 
+      - name: Setup
+        run: pip install ruff
+
       - name: Lint
         id: lint
         run: ruff check --output-format=github .
