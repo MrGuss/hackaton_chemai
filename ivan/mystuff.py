@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 # import stuff
 from urllib.request import urlretrieve
 import pandas as pd
 
-# In[ ]:
+# In[2]:
 
 
 FILES = {
@@ -24,25 +24,25 @@ for filename, file_id in FILES.items():
 
 print("Done.")
 
-# In[ ]:
+# In[3]:
 
 
 sample_sub = pd.read_csv("sample_submission.csv").set_index("index")
 test = pd.read_csv("test.csv").set_index("index")
 train = pd.read_csv("train.csv").set_index("index")
 
-# In[11]:
+# In[4]:
 
 
 train.info()
 train.describe()
 
-# In[ ]:
+# In[5]:
 
 
 train.head()
 
-# In[ ]:
+# In[6]:
 
 
 # check missing
@@ -50,7 +50,7 @@ missing = train.isnull().sum()
 missing = missing[missing > 0].sort_values(ascending=False)
 print(missing if len(missing) else "No missing values")
 
-# In[25]:
+# In[7]:
 
 
 # targets destribution
